@@ -35,12 +35,18 @@ public class ExtraTasks {
 
     public int caughtSpeeding(int speed, boolean birthday) {
         int value =0;
-        if (speed < 61 || speed < 66 && birthday) {
-            return value;
-        } else if (speed > 60 && speed < 81 || speed > 66 && speed < 86 && birthday) {
-            value = 1;
-        } else if (speed > 81 || speed > 86 && birthday) {
-            value = 2;
+        if (birthday) {
+            if (speed > 66 && speed < 86) {
+                value = 1;
+            } else if (speed >= 86) {
+                value = 2;
+            }
+        } if (!birthday) {
+            if (speed > 61 && speed < 81) {
+                value = 1;
+            } else if (speed >= 81) {
+                value = 2;
+            }
         }
         return value;
     }
