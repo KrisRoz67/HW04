@@ -12,7 +12,7 @@ public class ExtraTasks {
         System.out.println("------------------------------");
         System.out.println(func.imposeFine(func.caughtSpeeding(60, false)));
         System.out.println(func.imposeFine(func.caughtSpeeding(65, false)));
-        System.out.println(func.imposeFine(func.caughtSpeeding(65, true)));
+        System.out.println(func.imposeFine(func.caughtSpeeding(66, true)));
         System.out.println("------------------------------");
         System.out.println(func.fizzString("fig"));
         System.out.println(func.fizzString("dib"));
@@ -36,14 +36,14 @@ public class ExtraTasks {
     public int caughtSpeeding(int speed, boolean birthday) {
         int value = 0;
         if (birthday) {
-            if (speed > 66 && speed < 86) {
+            if (speed > 65 && speed < 86) {
                 value = 1;
-            } else if (speed >= 86) {
+            } else if (speed > 85) {
                 value = 2;
             }
-        } else if (speed > 61 && speed < 81) {
+        } else if (speed > 60 && speed < 81) {
             value = 1;
-        } else if (speed >= 81) {
+        } else if (speed > 80) {
             value = 2;
         }
 
