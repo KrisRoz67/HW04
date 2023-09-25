@@ -41,13 +41,12 @@ public class ExtraTasks {
             } else if (speed >= 86) {
                 value = 2;
             }
-        } if (!birthday) {
-            if (speed > 61 && speed < 81) {
+        }else if (speed > 61 && speed < 81) {
                 value = 1;
-            } else if (speed >= 81) {
+        }else if (speed >= 81) {
                 value = 2;
-            }
         }
+
         return value;
     }
 
