@@ -12,7 +12,7 @@ public class ExtraTasks {
         System.out.println("------------------------------");
         System.out.println(func.imposeFine(func.caughtSpeeding(60, false)));
         System.out.println(func.imposeFine(func.caughtSpeeding(65, false)));
-        System.out.println(func.imposeFine(func.caughtSpeeding(66, true)));
+        System.out.println(func.imposeFine(func.caughtSpeeding(65, true)));
         System.out.println("------------------------------");
         System.out.println(func.fizzString("fig"));
         System.out.println(func.fizzString("dib"));
@@ -46,7 +46,6 @@ public class ExtraTasks {
         } else if (speed > 80) {
             value = 2;
         }
-
         return value;
     }
 
