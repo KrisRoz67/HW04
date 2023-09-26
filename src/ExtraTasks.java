@@ -21,6 +21,7 @@ public class ExtraTasks {
         System.out.println(func.closeFar(1, 2, 10));
         System.out.println(func.closeFar(1, 2, 3));
         System.out.println(func.closeFar(4, 1, 3));
+        System.out.println(func.closeFar(10, 10, 8));
 
     }
 
@@ -70,9 +71,9 @@ public class ExtraTasks {
     }
 
     public boolean closeFar(int a, int b, int c) {
-        if (Math.abs(b - a) == 1 && Math.abs(c - a) > 1 && Math.abs(c - b) > 1) {
+        if (Math.abs(b - a)<= 1 && Math.abs(c - a) > 1 && Math.abs(c - b) > 1) {
             return true;
-        } else return Math.abs(c - a) == 1 && Math.abs(b - a) > 1 && Math.abs(b - c) > 1;
+        } else return Math.abs(c - a) <= 1 && Math.abs(b - a) > 1 && Math.abs(b - c) > 1;
     }
 }
 

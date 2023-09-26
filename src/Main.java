@@ -10,12 +10,12 @@ public class Main {
         System.out.println(main.sumDouble(2, 2));
         System.out.println("------------------------------------");
         System.out.println(main.intMax(1, 2, 3));
-        System.out.println(main.intMax(1, 3, 1));
+        System.out.println(main.intMax(1, 3, 2));
         System.out.println(main.intMax(3, 2, 1));
         System.out.println("------------------------------------");
-        System.out.println(main.nearHundred(93,100));
-        System.out.println(main.nearHundred(90,100));
-        System.out.println(main.nearHundred(89,100));
+        System.out.println(main.nearHundred(193));
+        System.out.println(main.nearHundred(90));
+        System.out.println(main.nearHundred(89));
         System.out.println("------------------------------------");
         System.out.println(main.notString("candy"));
         System.out.println(main.notString("x"));
@@ -42,23 +42,22 @@ public class Main {
     }
 
     public int intMax(int a, int b, int c) {
-        int maxValue;
-        if (a > b) {
-            maxValue = a;
+        int maxValue = Math.max(a,b);
+        return Math.max(maxValue,c);
+       /*  решила упростить
+         if (a > b) {
+       //     maxValue = a; //
         } else {
             maxValue = b;
         }
         if (c > maxValue) {
             maxValue = c;
         }
-        return maxValue;
+        return maxValue; */
     }
 
-    public boolean nearHundred(int n, int d) {
-        if (Math.abs(n-d)> 0 && Math.abs(n-d)< 11){
-            return true;
-        }
-        return false;
+    public boolean nearHundred(int n) {
+        return Math.abs(n - 100) > 0 && Math.abs(n - 100) < 11 || Math.abs(n - 200) > 0 && Math.abs(n - 200) < 11;
     }
 
     public String notString(String str) {
